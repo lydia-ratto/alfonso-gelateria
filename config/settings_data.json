@@ -1,6 +1,7 @@
 {
   "current": {
-    "logo_width": 100,
+    "logo": "shopify:\/\/shop_images\/alfonso-logo-transparent_604416b4-7997-4d78-91be-2702296d0f2d.png",
+    "logo_width": 150,
     "colors_solid_button_labels": "#f3e7d3",
     "colors_accent_1": "#ff8675",
     "gradient_accent_1": "",
