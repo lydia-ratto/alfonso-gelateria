@@ -75,9 +75,20 @@
 
 .button--secondary {
   --color-button: var(--color-base-outline-button-labels);
-  --color-button-text: var(--color-base-outline-button-labels);
-  --color-button: var(--color-background);
+  color: #988D7B;
+  --color-button: none;
   --alpha-button-background: 1;
+  border: 1px solid #FF8675;
+  border-radius: 2px;
+  padding: 2rem;
+  text-transform: capitalize;
+  box-shadow: none!important;
+}
+
+.button--secondary:hover {
+  background-color: #988D7B;
+  color: #F3E7D3;
+  border: none;
 }
 
 .color-background-2 .button--secondary,
@@ -1324,7 +1335,6 @@ button.shopify-payment-button__button--unbranded,
   --shadow-visible: var(--buttons-shadow-visible);
   --border-offset: var(--buttons-border-offset); /* reduce radius edge artifacts */
   --border-opacity: calc(1 - var(--buttons-border-opacity));
-  border-radius: var(--buttons-radius-outset);
   position: relative;
 }
 
@@ -1347,20 +1357,29 @@ button.shopify-payment-button__button--unbranded {
 .button,
 .shopify-challenge__button,
 .customer button {
+  font-family: 'Chaparral Pro';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  border: 0;
-  padding: 0 3rem;
   cursor: pointer;
-  font: inherit;
   font-size: 1.5rem;
   text-decoration: none;
   color: rgb(var(--color-button-text));
-  transition: box-shadow var(--duration-short) ease;
+  transition: 0.3s ease-in-out;
   -webkit-appearance: none;
   appearance: none;
   background-color: rgba(var(--color-button), var(--alpha-button-background));
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+  padding: 2rem;
 }
 
 .button:before,
@@ -1439,8 +1458,8 @@ button.shopify-payment-button__button--unbranded {
 .button-label,
 .shopify-challenge__button,
 .customer button {
-  font-size: 1.5rem;
-  letter-spacing: 0.1rem;
+  font-size: 1.7rem;
+  letter-spacing: 0.4em;
   line-height: calc(1 + 0.2 / var(--font-body-scale));
 }
 
