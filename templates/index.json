@@ -60,10 +60,42 @@
         "padding_top": 80,
         "padding_bottom": 80
       }
+    },
+    "966e2179-029e-4e63-8a60-6596e3f0d3f4": {
+      "type": "image-banner",
+      "blocks": {
+        "template--15993791840409__966e2179-029e-4e63-8a60-6596e3f0d3f4-1678635808d234787a-2": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "About our Gelato",
+            "button_link_1": "shopify:\/\/pages\/our-gelato",
+            "button_style_secondary_1": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--15993791840409__966e2179-029e-4e63-8a60-6596e3f0d3f4-1678635808d234787a-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/gelato-cone.png",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
     }
   },
   "order": [
     "0068256c-56e9-4627-9c95-5db80cfca60c",
-    "rich_text"
+    "rich_text",
+    "966e2179-029e-4e63-8a60-6596e3f0d3f4"
   ]
 }
