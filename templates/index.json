@@ -11,7 +11,7 @@
             "button_style_secondary_1": false,
             "button_label_2": "Shop",
             "button_link_2": "shopify:\/\/collections\/all",
-            "button_style_secondary_2": false
+            "button_style_secondary_2": true
           }
         }
       },
