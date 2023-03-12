@@ -1,12 +1,43 @@
 {
   "sections": {
+    "0068256c-56e9-4627-9c95-5db80cfca60c": {
+      "type": "image-banner",
+      "blocks": {
+        "template--15993791840409__0068256c-56e9-4627-9c95-5db80cfca60c-167862343137d599fe-2": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Visit Us",
+            "button_link_1": "shopify:\/\/pages\/locations",
+            "button_style_secondary_1": false,
+            "button_label_2": "Shop",
+            "button_link_2": "shopify:\/\/collections\/all",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--15993791840409__0068256c-56e9-4627-9c95-5db80cfca60c-167862343137d599fe-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/alfonso-team.png",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
     "rich_text": {
       "type": "rich-text",
       "blocks": {
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "<p>Introduce your brand<\/p>",
+            "heading": "<p>Authentic Italian Gelato<\/p>",
             "heading_size": "h1"
           }
         },
@@ -26,72 +57,13 @@
         "content_alignment": "center",
         "color_scheme": "background-1",
         "full_width": true,
-        "padding_top": 44,
-        "padding_bottom": 40
-      }
-    },
-    "collage-0": {
-      "type": "collage",
-      "blocks": {
-        "collection-0": {
-          "type": "collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "collection-1": {
-          "type": "collection",
-          "settings": {
-            "collection": ""
-          }
-        }
-      },
-      "block_order": [
-        "collection-0",
-        "collection-1"
-      ],
-      "settings": {
-        "heading": "",
-        "heading_size": "h2",
-        "desktop_layout": "right",
-        "mobile_layout": "collage",
-        "card_styles": "product-card-wrapper",
-        "color_scheme": "background-1",
-        "padding_top": 36,
-        "padding_bottom": 0
-      }
-    },
-    "featured-collection": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "all",
-        "products_to_show": 4,
-        "columns_desktop": 4,
-        "full_width": false,
-        "show_view_all": false,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "background-1",
-        "image_ratio": "square",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": false,
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 0,
-        "padding_bottom": 68
+        "padding_top": 80,
+        "padding_bottom": 80
       }
     }
   },
   "order": [
-    "rich_text",
-    "collage-0",
-    "featured-collection"
+    "0068256c-56e9-4627-9c95-5db80cfca60c",
+    "rich_text"
   ]
 }
