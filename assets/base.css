@@ -166,7 +166,7 @@
   --shadow-opacity: var(--product-card-shadow-opacity);
   --shadow-visible: var(--product-card-shadow-visible);
   --image-padding: var(--product-card-image-padding);
-  --text-alignment: var(--product-card-text-alignment);
+  --text-alignment: center;
 }
 
 .collection-card-wrapper .card,
@@ -436,6 +436,11 @@ h5,
   color: rgb(var(--color-foreground));
   line-height: calc(1 + 0.3 / max(1, var(--font-heading-scale)));
   word-break: break-word; */
+}
+
+.h3,
+.h5 {
+  line-height: calc(1 + 0.3 / max(1, var(--font-heading-scale)));
 }
 
 .hxl {
