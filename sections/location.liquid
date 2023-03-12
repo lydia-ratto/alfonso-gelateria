@@ -1,12 +1,138 @@
-{% schema %}
+{{ 'section-location.css' | asset_url | stylesheet_tag }}
+
+<location class="location-template">
+  {%- for block in section.blocks -%}
+    {%- case block.type -%}
+      {%- when '@app' -%}
+        <div class="page-width page-width--narrow">
+          {% render block %}
+        </div>
+      {%- when 'featured_image' -%}
+        {%- if location.image -%}
+          <div class="location-template__hero-container" {{ block.shopify_attributes }}>
+            <div
+              class="location-template__hero-{{ block.settings.image_height }} media"
+              itemprop="image"
+              {% if block.settings.image_height == 'adapt' and location.image %}
+                style="padding-bottom: {{ 1 | divided_by: location.image.aspect_ratio | times: 100 }}%;"
+              {% endif %}
+            >
+              <img
+                srcset="
+                  {% if location.image.width >= 350 %}{{ location.image | image_url: width: 350 }} 350w,{% endif %}
+                  {% if location.image.width >= 750 %}{{ location.image | image_url: width: 750 }} 750w,{% endif %}
+                  {% if location.image.width >= 1100 %}{{ location.image | image_url: width: 1100 }} 1100w,{% endif %}
+                  {% if location.image.width >= 1500 %}{{ location.image | image_url: width: 1500 }} 1500w,{% endif %}
+                  {% if location.image.width >= 2200 %}{{ location.image | image_url: width: 2200 }} 2200w,{% endif %}
+                  {% if location.image.width >= 3000 %}{{ location.image | image_url: width: 3000 }} 3000w,{% endif %}
+                  {{ location.image | image_url }} {{ location.image.width }}w
+                "
+                sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 }}px, (min-width: 750px) calc(100vw - 10rem), 100vw"
+                src="{{ location.image | image_url: width: 1100 }}"
+                loading="eager"
+                fetchpriority="high"
+                width="{{ location.image.width }}"
+                height="{{ location.image.height }}"
+                alt="{{ location.image.alt | escape }}"
+              >
+            </div>
+          </div>
+        {%- endif -%}
+
+      {%- when 'title' -%}
+        <header class="page-width page-width--narrow" {{ block.shopify_attributes }}>
+          <h1 class="location-template__title" itemprop="headline">{{ location.title | escape }}</h1>
+        </header>
+
+      {%- when 'description' -%}
+        <div
+          class="location-template__description page-width page-width--narrow rte"
+          itemprop="locationBody"
+          {{ block.shopify_attributes }}
+        >
+          {{ location.description }}
+        </div>
+
+      {%- when 'directions' -%}
+        <div class="location-template__direction-sharing page-width page-width--narrow" {{ block.shopify_attributes }}>
+          {% assign directions_url = request.origin | append: location.url %}
+          {% render 'directions-button', block: block, directions_link: directions_url %}
+        </div>
+    {%- endcase -%}
+  {%- endfor -%}
+
+  <div class="location-template__back element-margin-top center">
+    <a href="{{ location.url }}" class="location-template__link link animate-arrow">
+      <span class="icon-wrap">{% render 'icon-arrow' %}</span>
+      {{ 'locations.location.back_to_location' | t: title: location.title }}
+    </a>
+  </div>
+</location>
+
+<script type="application/ld+json">
   {
-    "name": "Section name",
-    "settings": []
+    "@context": "http://schema.org",
+    "@type": "Location",
+    "locationBody": {{ location.content | strip_html | json }},
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": {{ request.origin | append: page.url | json }}
+    },
+    "headline": {{ location.title | json }},
+    {% if location.excerpt != blank %}
+      "description": {{ location.excerpt | strip_html | json }},
+    {% endif %}
+    {% if location.image %}
+      "image": [
+        {{ location | image_url: width: 1920 | prepend: "https:" | json }}
+      ],
+    {% endif %}
   }
+</script>
+
+{% schema %}
+{
+  "name": "t:sections.main-location.name",
+  "tag": "section",
+  "class": "section",
+  "blocks": [
+    {
+      "type": "@app"
+    },
+    {
+      "type": "featured_image",
+      "name": "t:sections.main-location.blocks.featured_image.name"
+    },
+    {
+      "type": "content",
+      "name": "t:sections.main-location.blocks.content.name",
+      "limit": 1
+    },
+    {
+      "type": "title",
+      "name": "t:sections.main-location.blocks.title.name",
+      "limit": 1
+    },
+    {
+      "type": "description",
+      "name": "t:sections.main-location.blocks.description.name",
+      "limit": 1
+    },
+    {
+      "type": "time_selector",
+      "name": "t:sections.main-location.blocks.time_selector.name",
+      "limit": 3
+    },
+    {
+      "type": "directions",
+      "name": "t:sections.main-location.blocks.directions.name",
+      "limit": 1
+    },
+    {
+      "type": "contact",
+      "name": "t:sections.main-location.blocks.contact.name",
+      "limit": 1
+    }
+  ]
+}
 {% endschema %}
-
-{% stylesheet %}
-{% endstylesheet %}
-
-{% javascript %}
-{% endjavascript %}
