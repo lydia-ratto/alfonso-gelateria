@@ -6,7 +6,6 @@
         "featured_image": {
           "type": "featured_image",
           "settings": {
-            "image_height": "large"
           }
         },
         "title": {
@@ -49,18 +48,6 @@
         "contact"
       ],
       "settings": {
-        "enable_sticky_info": true,
-        "media_size": "medium",
-        "constrain_to_viewport": true,
-        "media_fit": "contain",
-        "gallery_layout": "stacked",
-        "media_position": "left",
-        "image_zoom": "lightbox",
-        "mobile_thumbnails": "hide",
-        "hide_variants": false,
-        "enable_video_looping": false,
-        "padding_top": 36,
-        "padding_bottom": 44
       }
     }
   },
