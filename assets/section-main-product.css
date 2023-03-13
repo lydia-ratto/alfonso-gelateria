@@ -347,6 +347,11 @@ a.product__text {
   margin: 0;
 }
 
+.product__title h1 {
+  font-size: 3rem;
+  text-align: left;
+}
+
 .product__title > a {
   display: none;
 }
