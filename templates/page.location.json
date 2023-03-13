@@ -1,1 +1,57 @@
-
+{
+  "sections": {
+    "main": {
+      "type": "main-location",
+      "blocks": {
+        "featured_image": {
+          "type": "featured_image",
+          "settings": {
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "content": {
+          "type": "content",
+          "settings": {
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+          }
+        },
+        "time_selector": {
+          "type": "time_selector",
+          "settings": {
+          }
+        },
+        "directions": {
+          "type": "directions",
+          "settings": {
+          }
+        },
+        "contact": {
+          "type": "contact",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "featured_image",
+        "title",
+        "description",
+        "time_selector",
+        "directions",
+        "contact"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
