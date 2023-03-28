@@ -1,138 +1,331 @@
-{{ 'section-location.css' | asset_url | stylesheet_tag }}
+{{ 'section-main-location.css' | asset_url | stylesheet_tag }}
 
-<location class="location-template">
-  {%- for block in section.blocks -%}
-    {%- case block.type -%}
-      {%- when '@app' -%}
-        <div class="page-width page-width--narrow">
-          {% render block %}
-        </div>
-      {%- when 'featured_image' -%}
-        {%- if location.image -%}
-          <div class="location-template__hero-container" {{ block.shopify_attributes }}>
-            <div
-              class="location-template__hero-{{ block.settings.image_height }} media"
-              itemprop="image"
-              {% if block.settings.image_height == 'adapt' and location.image %}
-                style="padding-bottom: {{ 1 | divided_by: location.image.aspect_ratio | times: 100 }}%;"
-              {% endif %}
-            >
-              <img
-                srcset="
-                  {% if location.image.width >= 350 %}{{ location.image | image_url: width: 350 }} 350w,{% endif %}
-                  {% if location.image.width >= 750 %}{{ location.image | image_url: width: 750 }} 750w,{% endif %}
-                  {% if location.image.width >= 1100 %}{{ location.image | image_url: width: 1100 }} 1100w,{% endif %}
-                  {% if location.image.width >= 1500 %}{{ location.image | image_url: width: 1500 }} 1500w,{% endif %}
-                  {% if location.image.width >= 2200 %}{{ location.image | image_url: width: 2200 }} 2200w,{% endif %}
-                  {% if location.image.width >= 3000 %}{{ location.image | image_url: width: 3000 }} 3000w,{% endif %}
-                  {{ location.image | image_url }} {{ location.image.width }}w
-                "
-                sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 }}px, (min-width: 750px) calc(100vw - 10rem), 100vw"
-                src="{{ location.image | image_url: width: 1100 }}"
-                loading="eager"
-                fetchpriority="high"
-                width="{{ location.image.width }}"
-                height="{{ location.image.height }}"
-                alt="{{ location.image.alt | escape }}"
-              >
-            </div>
-          </div>
-        {%- endif -%}
-
-      {%- when 'title' -%}
-        <header class="page-width page-width--narrow" {{ block.shopify_attributes }}>
-          <h1 class="location-template__title" itemprop="headline">{{ location.title | escape }}</h1>
-        </header>
-
-      {%- when 'description' -%}
-        <div
-          class="location-template__description page-width page-width--narrow rte"
-          itemprop="locationBody"
-          {{ block.shopify_attributes }}
-        >
-          {{ location.description }}
-        </div>
-
-      {%- when 'directions' -%}
-        <div class="location-template__direction-sharing page-width page-width--narrow" {{ block.shopify_attributes }}>
-          {% assign directions_url = request.origin | append: location.url %}
-          {% render 'directions-button', block: block, directions_link: directions_url %}
-        </div>
-    {%- endcase -%}
-  {%- endfor -%}
-
-  <div class="location-template__back element-margin-top center">
-    <a href="{{ location.url }}" class="location-template__link link animate-arrow">
-      <span class="icon-wrap">{% render 'icon-arrow' %}</span>
-      {{ 'locations.location.back_to_location' | t: title: location.title }}
-    </a>
+<div class="main-location main-location--{{ section.settings.content_layout }} page-width isolate{% if settings.text_boxes_border_thickness > 0 and settings.text_boxes_border_opacity > 0 and settings.media_border_thickness > 0 and settings.media_border_opacity > 0 %} collapse-borders{% endif %}{% unless section.settings.color_scheme == 'background-1' and settings.media_border_thickness > 0 and settings.text_boxes_shadow_opacity == 0 and settings.text_boxes_border_thickness == 0 or settings.text_boxes_border_opacity == 0 %} collapse-corners{% endunless %} section-{{ section.id }}-padding">
+<div class="main-location__grid grid grid--gapless grid--1-col grid--{% if section.settings.desktop_image_width == 'medium' %}2-col-tablet{% else %}3-col-tablet{% endif %}{% if section.settings.layout == 'text_first' %} main-location__grid--reverse{% endif %}">
+  <div class="main-location__media-item main-location__media-item--{{ section.settings.desktop_image_width }} main-location__media-item--{{ section.settings.desktop_content_position }} grid__item">
+    <div
+      class="main-location__media main-location__media--{{ section.settings.height }} gradient color-{{ section.settings.color_scheme }} global-media-settings {% if section.settings.location_image != blank %}media{% else %}main-location__media--placeholder placeholder{% endif %}"
+      {% if section.settings.height == 'adapt' and section.settings.location_image != blank %}
+        style="padding-bottom: {{ 1 | divided_by: section.settings.location_image.aspect_ratio | times: 100 }}%;"
+      {% endif %}
+    >
+      {%- if section.settings.location_image != blank -%}
+        {%- capture sizes -%}
+          (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px,
+          (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)
+        {%- endcapture -%}
+        {{
+          section.settings.location_image
+          | image_url: width: 1500
+          | image_tag: loading: 'lazy', sizes: sizes, widths: '165, 360, 535, 750, 1070, 1500'
+        }}
+      {%- else -%}
+        {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+      {%- endif -%}
+    </div>
   </div>
-</location>
-
-<script type="application/ld+json">
-  {
-    "@context": "http://schema.org",
-    "@type": "Location",
-    "locationBody": {{ location.content | strip_html | json }},
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": {{ request.origin | append: page.url | json }}
-    },
-    "headline": {{ location.title | json }},
-    {% if location.excerpt != blank %}
-      "description": {{ location.excerpt | strip_html | json }},
-    {% endif %}
-    {% if location.image %}
-      "image": [
-        {{ location | image_url: width: 1920 | prepend: "https:" | json }}
-      ],
-    {% endif %}
-  }
-</script>
+  <div class="main-location__text-item grid__item">
+    <div>
+    {%- for block in section.blocks -%}
+      {% case block.type %}
+        {%- when 'heading' -%}
+          <h1 class="location__heading {{ block.shopify_attributes }}" style="text-align:left">
+            {{ block.settings.heading | escape }}
+          </h1>
+        {%- when 'textarea' -%}
+          <p class="location__textarea {{ block.shopify_attributes }}">
+            {{ block.settings.text_1 }}
+          </p>
+        {%- when 'text' -%}
+          <p >
+            {{ block.settings.text_2 }}
+          </p>
+        {%- when 'buttons' -%}
+          <div
+            class="main-location__buttons{% if block.settings.directions_button != blank and block.settings.contact_button != blank %} {% endif %}"
+            {{ block.shopify_attributes }}
+          >
+            {%- if block.settings.directions_button != blank -%}
+              <a
+                {% if block.settings.directions_button_link == blank %}
+                  role="link"
+                {% else %}
+                  href="{{ block.settings.directions_button_link }}"
+                {% endif %}
+                class="button button--primary"
+              >
+                {{- block.settings.directions_button | escape -}}
+              </a>
+            {%- endif -%}
+            {%- if block.settings.contact_button != blank -%}
+              <a
+                {% if block.settings.contact_button_link == blank %}
+                  role="link"
+                {% else %}
+                  href="{{ block.settings.contact_button_link }}"
+                {% endif %}
+                class="button button--secondary"
+              >
+                {{- block.settings.contact_button | escape -}}
+              </a>
+            {%- endif -%}
+          </div>
+      {%- endcase -%}
+    {%- endfor -%}
+  </div>
+  </div>
+</div>
+</div>
 
 {% schema %}
-{
-  "name": "t:sections.main-location.name",
-  "tag": "section",
-  "class": "section",
-  "blocks": [
+  {
+    "name": "Location page",
+    "tag": "section",
+    "class": "section",
+    "settings": [
+      {
+        "id": "location_image",
+        "type": "image_picker",
+        "label": "t:sections.main-location.settings.location_image.label"
+        // Add info here
+      },
     {
-      "type": "@app"
+      "type": "select",
+      "id": "height",
+      "options": [
+        {
+          "value": "adapt",
+          "label": "t:sections.image-with-text.settings.height.options__1.label"
+        },
+        {
+          "value": "small",
+          "label": "t:sections.image-with-text.settings.height.options__2.label"
+        },
+        {
+          "value": "medium",
+          "label": "t:sections.image-with-text.settings.height.options__3.label"
+        },
+        {
+          "value": "large",
+          "label": "t:sections.image-with-text.settings.height.options__4.label"
+        }
+      ],
+      "default": "adapt",
+      "label": "t:sections.image-with-text.settings.height.label"
     },
     {
-      "type": "featured_image",
-      "name": "t:sections.main-location.blocks.featured_image.name"
+      "type": "select",
+      "id": "desktop_image_width",
+      "options": [
+        {
+          "value": "small",
+          "label": "t:sections.image-with-text.settings.desktop_image_width.options__1.label"
+        },
+        {
+          "value": "medium",
+          "label": "t:sections.image-with-text.settings.desktop_image_width.options__2.label"
+        },
+        {
+          "value": "large",
+          "label": "t:sections.image-with-text.settings.desktop_image_width.options__3.label"
+        }
+      ],
+      "default": "medium",
+      "label": "t:sections.image-with-text.settings.desktop_image_width.label",
+      "info": "t:sections.image-with-text.settings.desktop_image_width.info"
     },
     {
-      "type": "content",
-      "name": "t:sections.main-location.blocks.content.name",
-      "limit": 1
+      "type": "select",
+      "id": "layout",
+      "options": [
+        {
+          "value": "image_first",
+          "label": "t:sections.image-with-text.settings.layout.options__1.label"
+        },
+        {
+          "value": "text_first",
+          "label": "t:sections.image-with-text.settings.layout.options__2.label"
+        }
+      ],
+      "default": "image_first",
+      "label": "t:sections.image-with-text.settings.layout.label",
+      "info": "t:sections.image-with-text.settings.layout.info"
     },
     {
-      "type": "title",
-      "name": "t:sections.main-location.blocks.title.name",
-      "limit": 1
+      "type": "select",
+      "id": "desktop_content_position",
+      "options": [
+        {
+          "value": "top",
+          "label": "t:sections.image-with-text.settings.desktop_content_position.options__1.label"
+        },
+        {
+          "value": "middle",
+          "label": "t:sections.image-with-text.settings.desktop_content_position.options__2.label"
+        },
+        {
+          "value": "bottom",
+          "label": "t:sections.image-with-text.settings.desktop_content_position.options__3.label"
+        }
+      ],
+      "default": "top",
+      "label": "t:sections.image-with-text.settings.desktop_content_position.label"
     },
     {
-      "type": "description",
-      "name": "t:sections.main-location.blocks.description.name",
-      "limit": 1
+      "type": "select",
+      "id": "desktop_content_alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.image-with-text.settings.desktop_content_alignment.options__1.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.image-with-text.settings.desktop_content_alignment.options__2.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.image-with-text.settings.desktop_content_alignment.options__3.label"
+        }
+      ],
+      "default": "left",
+      "label": "t:sections.image-with-text.settings.desktop_content_alignment.label"
     },
     {
-      "type": "time_selector",
-      "name": "t:sections.main-location.blocks.time_selector.name",
-      "limit": 3
+      "type": "header",
+      "content": "Mobile layout"
     },
     {
-      "type": "directions",
-      "name": "t:sections.main-location.blocks.directions.name",
-      "limit": 1
+      "type": "select",
+      "id": "mobile_content_alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.image-with-text.settings.mobile_content_alignment.options__1.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.image-with-text.settings.mobile_content_alignment.options__2.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.image-with-text.settings.mobile_content_alignment.options__3.label"
+        }
+      ],
+      "default": "left",
+      "label": "t:sections.image-with-text.settings.mobile_content_alignment.label"
     },
     {
-      "type": "contact",
-      "name": "t:sections.main-location.blocks.contact.name",
-      "limit": 1
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
     }
+    ],
+    "blocks": [
+      {
+        "type": "heading",
+        "name": "t:sections.main-location.blocks.heading.name",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "text",
+            "id": "heading",
+            "default": "Location",
+            "label": "t:sections.main-location.blocks.heading.settings.heading.label"
+          }
+        ]
+      },
+      {
+        "type": "textarea",
+        "name": "t:sections.main-location.blocks.text_1.name",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "textarea",
+            "id": "text_1",
+            "default": "Shop description here",
+            "label": "t:sections.main-location.blocks.text_1.settings.textarea.label"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "name": "t:sections.main-location.blocks.text_2.name",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "text",
+            "id": "text_2",
+            "default": "Here we serve 14 gelato flavours, including sorbets. We also have speciality hot chocolate, coffee, pastries and other sweet artisan products.",
+            "label": "t:sections.main-location.blocks.text_2.settings.text.label"
+          }
+        ]
+      },
+      {
+        "type": "buttons",
+        "name": "t:sections.main-location.blocks.buttons.name",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "text",
+            "id": "directions_button",
+            "default": "Directions",
+            "label": "t:sections.main-location.blocks.buttons.settings.directions_button.label"
+          },
+          {
+            "type": "url",
+            "id": "directions_button_link",
+            "label": "t:sections.main-location.blocks.buttons.settings.directions_button_link.label"
+          },
+          {
+            "type": "text",
+            "id": "contact_button",
+            "default": "Contact",
+            "label": "t:sections.main-location.blocks.buttons.settings.contact_button.label"
+          },
+          {
+            "type": "url",
+            "id": "contact_button_link",
+            "label": "t:sections.main-location.blocks.buttons.settings.contact_button_link.label"
+          }
+        ]
+      }
+    ],
+
+    "presets": [
+      {
+        "name": "t:sections.main-location.presets.name",
+        "blocks": [
+          {
+            "type": "heading"
+          }, {
+            "type": "textarea"
+          }, {
+            "type": "text"
+          }, {
+            "type": "buttons"
+          }
+        ]
+      }
   ]
-}
+  }
 {% endschema %}

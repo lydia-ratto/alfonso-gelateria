@@ -3236,6 +3236,134 @@
       "presets": {
         "name": "Collapsible content"
       }
+    },
+    "main-location": {
+      "name": "Location",
+      "settings": {
+        "location_image": {
+          "label": "Image"
+        },
+        "height": {
+          "options__1": {
+            "label": "Adapt to image"
+          },
+          "options__2": {
+            "label": "Small"
+          },
+          "options__3": {
+            "label": "Medium"
+          },
+          "options__4": {
+            "label": "Large"
+          },
+          "label": "Image height"
+        },
+        "desktop_image_width": {
+          "options__1": {
+            "label": "Small"
+          },
+          "options__2": {
+            "label": "Medium"
+          },
+          "options__3": {
+            "label": "Large"
+          },
+          "label": "Desktop image width",
+          "info": "Image is automatically optimized for mobile."
+        },
+        "layout": {
+          "options__1": {
+            "label": "Image first"
+          },
+          "options__2": {
+            "label": "Image second"
+          },
+          "label": "Desktop image placement",
+          "info": "Image first is the default mobile layout."
+        },
+        "desktop_content_alignment": {
+          "options__1": {
+            "label": "Left"
+          },
+          "options__2": {
+            "label": "Center"
+          },
+          "options__3": {
+            "label": "Right"
+          },
+          "label": "Desktop content alignment"
+        },
+        "desktop_content_position": {
+          "options__1": {
+            "label": "Top"
+          },
+          "options__2": {
+            "label": "Middle"
+          },
+          "options__3": {
+            "label": "Bottom"
+          },
+          "label": "Desktop content position"
+        },
+        "mobile_content_alignment": {
+          "options__1": {
+            "label": "Left"
+          },
+          "options__2": {
+            "label": "Center"
+          },
+          "options__3": {
+            "label": "Right"
+          },
+          "label": "Mobile content alignment"
+        }
+      },
+      "blocks": {
+        "heading": {
+          "name": "Location name",
+          "settings": {
+            "heading": {
+              "label": "Location name"
+            }
+          }
+        },
+        "text_1": {
+          "name": "Description",
+          "settings": {
+            "textarea": {
+              "label": "Description"
+            }
+          }
+        },
+        "text_2": {
+          "name": "Product offering",
+          "settings": {
+            "text": {
+              "label": "Product offering"
+            }
+          }
+        },
+        "buttons": {
+          "name": "Location buttons",
+          "settings": {
+            "directions_button": {
+              "label": "Button text"
+            },
+            "directions_button_link": {
+              "label": "Google Maps url"
+            },
+            "contact_button": {
+              "label": "Button text"
+            },
+            "contact_button_link": {
+              "label": "Direct to contact page"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Location page"
+      }
     }
   }
 }
