@@ -6,6 +6,11 @@
   word-break: break-word;
 }
 
+.main-location {
+  margin-bottom: 10rem;
+  margin-top: 5rem;
+}
+
 .main-location .grid {
   margin-bottom: 0;
 }
@@ -22,7 +27,6 @@
 
 .main-location__media {
   min-height: 100%;
-  overflow: visible;
 }
 
 .main-location__media--small {
@@ -43,11 +47,12 @@
   }
 
   .main-location__media--medium {
-    height: 46rem;
+    height: 55rem;
+    max-width: 80%;
   }
 
   .main-location__media--large {
-    height: 69.5rem;
+    height: 79.5rem;
   }
 }
 

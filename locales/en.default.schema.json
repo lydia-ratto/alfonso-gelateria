@@ -3343,6 +3343,47 @@
             }
           }
         },
+        "opening_times": {
+          "name": "Opening times",
+          "settings": {
+            "week_open_hour": {
+              "label": "Weekday open"
+            },
+            "week_open_minutes": {
+              "label": ""
+            },
+            "week_close_hour": {
+              "label": "Weekday close"
+            },
+            "week_close_minutes": {
+              "label": ""
+            },
+            "sat_open_hour": {
+              "label": "Saturday open"
+            },
+            "sat_open_minutes": {
+              "label": ""
+            },
+            "sat_close_hour": {
+              "label": "Saturday close"
+            },
+            "sat_close_minutes": {
+              "label": ""
+            },
+            "sun_open_hour": {
+              "label": "Sunday open"
+            },
+            "sun_open_minutes": {
+              "label": ""
+            },
+            "sun_close_hour": {
+              "label": "Sunday close"
+            },
+            "sun_close_minutes": {
+              "label": ""
+            }
+          }
+        },
         "buttons": {
           "name": "Location buttons",
           "settings": {

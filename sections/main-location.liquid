@@ -29,7 +29,7 @@
     {%- for block in section.blocks -%}
       {% case block.type %}
         {%- when 'heading' -%}
-          <h1 class="location__heading {{ block.shopify_attributes }}" style="text-align:left">
+          <h1 class="location__heading {{ block.shopify_attributes }}" style="text-align:left; margin-top: 0px">
             {{ block.settings.heading | escape }}
           </h1>
         {%- when 'textarea' -%}
@@ -39,6 +39,14 @@
         {%- when 'text' -%}
           <p >
             {{ block.settings.text_2 }}
+          </p>
+        {%- when 'select' -%}
+          <p >
+            Mon - Fri: {{ block.settings.week_open_hour }}:{{ block.settings.week_open_minutes }} - {{ block.settings.week_close_hour }}:{{ block.settings.week_close_minutes }}
+            <br>
+            Sat: {{ block.settings.sat_open_hour }}:{{ block.settings.sat_open_minutes }} - {{ block.settings.sat_close_hour }}:{{ block.settings.sat_close_minutes }}
+            <br>
+            Sun: {{ block.settings.sun_open_hour }}:{{ block.settings.sun_open_minutes }} - {{ block.settings.sun_close_hour }}:{{ block.settings.sun_close_minutes }}
           </p>
         {%- when 'buttons' -%}
           <div
@@ -110,7 +118,7 @@
           "label": "t:sections.image-with-text.settings.height.options__4.label"
         }
       ],
-      "default": "adapt",
+      "default": "medium",
       "label": "t:sections.image-with-text.settings.height.label"
     },
     {
@@ -281,6 +289,301 @@
         ]
       },
       {
+        "type": "select",
+        "name":"t:sections.main-location.blocks.opening_times.name",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "select",
+            "id": "week_open_hour",
+            "label": "t:sections.main-location.blocks.opening_times.settings.week_open_hour.label",
+            "options": [
+              {
+                "value": "7",
+                "label": "7"
+              },
+              {
+                "value": "8",
+                "label": "8"
+              },
+              {
+                "value": "9",
+                "label": "9"
+              },
+              {
+                "value": "10",
+                "label": "10"
+              },
+              {
+                "value": "11",
+                "label": "11"
+              },
+              {
+                "value": "12",
+                "label": "12"
+              }
+            ],
+            "default": "9"
+          },
+          {
+            "type": "select",
+            "id": "week_open_minutes",
+            "label": "t:sections.main-location.blocks.opening_times.settings.week_open_minutes.label",
+            "options": [
+              {
+                "value": "00",
+                "label": "00"
+              },
+              {
+                "value": "30",
+                "label": "30"
+              }
+            ],
+            "default": "00"
+          },
+          {
+            "type": "select",
+            "id": "week_close_hour",
+            "label": "t:sections.main-location.blocks.opening_times.settings.week_close_hour.label",
+            "options": [
+              {
+                "value": "16",
+                "label": "16"
+              },
+              {
+                "value": "17",
+                "label": "17"
+              },
+              {
+                "value": "18",
+                "label": "18"
+              },
+              {
+                "value": "19",
+                "label": "19"
+              },
+              {
+                "value": "20",
+                "label": "20"
+              },
+              {
+                "value": "21",
+                "label": "21"
+              }
+            ],
+            "default": "17"
+          },
+          {
+            "type": "select",
+            "id": "week_close_minutes",
+            "label": "t:sections.main-location.blocks.opening_times.settings.week_close_minutes.label",
+            "options": [
+              {
+                "value": "00",
+                "label": "00"
+              },
+              {
+                "value": "30",
+                "label": "30"
+              }
+            ],
+            "default": "00"
+          },
+          {
+          "type": "select",
+            "id": "sat_open_hour",
+            "label": "t:sections.main-location.blocks.opening_times.settings.sat_open_hour.label",
+            "options": [
+              {
+                "value": "7",
+                "label": "7"
+              },
+              {
+                "value": "8",
+                "label": "8"
+              },
+              {
+                "value": "9",
+                "label": "9"
+              },
+              {
+                "value": "10",
+                "label": "10"
+              },
+              {
+                "value": "11",
+                "label": "11"
+              },
+              {
+                "value": "12",
+                "label": "12"
+              }
+            ],
+            "default": "9"
+          },
+          {
+            "type": "select",
+            "id": "sat_open_minutes",
+            "label": "t:sections.main-location.blocks.opening_times.settings.sat_open_minutes.label",
+            "options": [
+              {
+                "value": "00",
+                "label": "00"
+              },
+              {
+                "value": "30",
+                "label": "30"
+              }
+            ],
+            "default": "00"
+          },
+          {
+            "type": "select",
+            "id": "sat_close_hour",
+            "label": "t:sections.main-location.blocks.opening_times.settings.sat_close_hour.label",
+            "options": [
+              {
+                "value": "16",
+                "label": "16"
+              },
+              {
+                "value": "17",
+                "label": "17"
+              },
+              {
+                "value": "18",
+                "label": "18"
+              },
+              {
+                "value": "19",
+                "label": "19"
+              },
+              {
+                "value": "20",
+                "label": "20"
+              },
+              {
+                "value": "21",
+                "label": "21"
+              }
+            ],
+            "default": "17"
+          },
+          {
+            "type": "select",
+            "id": "sat_close_minutes",
+            "label": "t:sections.main-location.blocks.opening_times.settings.sat_close_minutes.label",
+            "options": [
+              {
+                "value": "00",
+                "label": "00"
+              },
+              {
+                "value": "30",
+                "label": "30"
+              }
+            ],
+            "default": "00"
+          },
+          {
+          "type": "select",
+            "id": "sun_open_hour",
+            "label": "t:sections.main-location.blocks.opening_times.settings.sun_open_hour.label",
+            "options": [
+              {
+                "value": "7",
+                "label": "7"
+              },
+              {
+                "value": "8",
+                "label": "8"
+              },
+              {
+                "value": "9",
+                "label": "9"
+              },
+              {
+                "value": "10",
+                "label": "10"
+              },
+              {
+                "value": "11",
+                "label": "11"
+              },
+              {
+                "value": "12",
+                "label": "12"
+              }
+            ],
+            "default": "9"
+          },
+          {
+            "type": "select",
+            "id": "sun_open_minutes",
+            "label": "t:sections.main-location.blocks.opening_times.settings.sun_open_minutes.label",
+            "options": [
+              {
+                "value": "00",
+                "label": "00"
+              },
+              {
+                "value": "30",
+                "label": "30"
+              }
+            ],
+            "default": "00"
+          },
+          {
+            "type": "select",
+            "id": "sun_close_hour",
+            "label": "t:sections.main-location.blocks.opening_times.settings.sun_close_hour.label",
+            "options": [
+              {
+                "value": "16",
+                "label": "16"
+              },
+              {
+                "value": "17",
+                "label": "17"
+              },
+              {
+                "value": "18",
+                "label": "18"
+              },
+              {
+                "value": "19",
+                "label": "19"
+              },
+              {
+                "value": "20",
+                "label": "20"
+              },
+              {
+                "value": "21",
+                "label": "21"
+              }
+            ],
+            "default": "17"
+          },
+          {
+            "type": "select",
+            "id": "sun_close_minutes",
+            "label": "t:sections.main-location.blocks.opening_times.settings.sun_close_minutes.label",
+            "options": [
+              {
+                "value": "00",
+                "label": "00"
+              },
+              {
+                "value": "30",
+                "label": "30"
+              }
+            ],
+            "default": "00"
+          }
+        ]
+      },
+      {
         "type": "buttons",
         "name": "t:sections.main-location.blocks.buttons.name",
         "limit": 1,
@@ -322,6 +625,8 @@
           }, {
             "type": "text"
           }, {
+            "type": "select"
+          },{
             "type": "buttons"
           }
         ]
