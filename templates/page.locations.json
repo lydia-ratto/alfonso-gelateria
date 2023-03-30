@@ -1,0 +1,117 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "83736bd3-6536-4e91-a1fd-63f0716b9fd5": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--16005904302233__83736bd3-6536-4e91-a1fd-63f0716b9fd5-168016050700b8fced-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/witney_db915c5d-553a-4095-b402-1a3e97106536.png",
+            "title": "Witney",
+            "text": "",
+            "link_label": "Details",
+            "link": "shopify:\/\/pages\/witney"
+          }
+        },
+        "d78c69de-5aa9-42a1-9b9d-8071577a4973": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/woodstock.png",
+            "title": "Summertown",
+            "text": "",
+            "link_label": "Details",
+            "link": "shopify:\/\/pages\/summertown"
+          }
+        },
+        "bd7834e3-ff92-4622-a685-10be935cdaca": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/summertown_8f4cff13-a29a-4b74-b633-05334992111f.png",
+            "title": "Summertown",
+            "text": "",
+            "link_label": "Details",
+            "link": "shopify:\/\/pages\/summertown"
+          }
+        }
+      },
+      "block_order": [
+        "template--16005904302233__83736bd3-6536-4e91-a1fd-63f0716b9fd5-168016050700b8fced-0",
+        "d78c69de-5aa9-42a1-9b9d-8071577a4973",
+        "bd7834e3-ff92-4622-a685-10be935cdaca"
+      ],
+      "settings": {
+        "title": "Oxfordshire",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "5acc8408-640a-402c-a22d-078b0ec478a2": {
+      "type": "multicolumn",
+      "blocks": {
+        "5f1dc018-ba5b-4710-8efd-c3bcc44e226d": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/coming_soon.png",
+            "title": "Stow-on-the-Wold",
+            "text": "",
+            "link_label": "Details",
+            "link": "shopify:\/\/pages\/stow-on-the-wold"
+          }
+        },
+        "6ef1cbef-68c6-4740-a42c-f773d4617484": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "5f1dc018-ba5b-4710-8efd-c3bcc44e226d",
+        "6ef1cbef-68c6-4740-a42c-f773d4617484"
+      ],
+      "settings": {
+        "title": "Gloucestershire",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "83736bd3-6536-4e91-a1fd-63f0716b9fd5",
+    "5acc8408-640a-402c-a22d-078b0ec478a2"
+  ]
+}

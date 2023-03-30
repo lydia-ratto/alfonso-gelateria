@@ -36,8 +36,8 @@
   margin-right: auto;
 }
 
-.multicolumn .button {
-  margin-top: 1.5rem;
+.multicolumn {
+  margin: 3rem auto;
 }
 
 @media screen and (min-width: 750px) {
@@ -63,6 +63,7 @@
 .multicolumn:not(.background-none) .multicolumn-card {
   background: rgb(var(--color-background));
   height: 100%;
+  text-align: center;
 }
 
 .multicolumn.background-primary .multicolumn-card {

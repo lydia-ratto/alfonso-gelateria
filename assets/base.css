@@ -1395,7 +1395,7 @@ button.shopify-payment-button__button--unbranded {
   background-color: rgba(var(--color-button), var(--alpha-button-background));
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
   border-radius: 2px;
-  padding: 2rem;
+  padding: 1.5rem;
 }
 
 .button:before,
