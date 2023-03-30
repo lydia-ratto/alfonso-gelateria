@@ -49,7 +49,7 @@
       ],
       "settings": {
         "title": "Oxfordshire",
-        "heading_size": "h1",
+        "heading_size": "h2",
         "image_width": "full",
         "image_ratio": "adapt",
         "columns_desktop": 3,
@@ -93,7 +93,7 @@
       ],
       "settings": {
         "title": "Gloucestershire",
-        "heading_size": "h1",
+        "heading_size": "h2",
         "image_width": "full",
         "image_ratio": "adapt",
         "columns_desktop": 3,
@@ -114,3 +114,4 @@
     "83736bd3-6536-4e91-a1fd-63f0716b9fd5",
     "5acc8408-640a-402c-a22d-078b0ec478a2"
   ]
+}
