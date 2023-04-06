@@ -105,7 +105,7 @@
                       {% if section.blocks.size == 1 %}710px{% else %}550px{% endif %}, calc(100vw - 30px)
                     {%- endcapture -%}
                     <div
-                      class="current-image"
+                      class="{%- if block.settings.enable_image_hover == true -%}current-image{% endif %}"
                       {%- if block.settings.image_3 != blank -%}
                       style='background-image: url("{{ block.settings.image_3 | image_url: width: 200 }}"); background-repeat: no-repeat; background-size: contain;'
                       {% endif %}>
@@ -118,9 +118,9 @@
                        widths: '275, 550, 710, 1420',
                        class: 'multicolumn-card__image' }}
                     </div>
-                    <div
-                      id="hover-image">
-                      {%- if block.settings.image_2 != blank -%}
+                    {%- if block.settings.image_2 != blank and block.settings.enable_image_hover == true -%}
+                      <div
+                        class="hover">
                         {{ block.settings.image_2
                          | image_url: width: 200
                          | image_tag:
@@ -128,14 +128,20 @@
                          sizes: sizes,
                          widths: '275, 550, 710, 1420',
                          class: 'multicolumn-card__image' }}
-                      {% endif %}
-                    </div>
+                      </div>
+                    {% endif %}
+                    {% if block.settings.title != blank and block.settings.heading_on_hover == true %}
+                      <div
+                        class="hover text-hover">
+                        <h3>{{ block.settings.title | escape }}</h3>
+                      </div>
+                    {% endif %}
                   </div>
                 </div>
               {%- endif -%}
               <div
                 class="multicolumn-card__info">
-                {%- if block.settings.title != blank -%}
+                {%- if block.settings.title != blank and block.settings.heading_on_hover == false -%}
                   <h3>{{ block.settings.title | escape }}</h3>
                 {%- endif -%}
                 {%- if block.settings.text != blank -%}
@@ -409,6 +415,12 @@
             "label": "t:sections.multicolumn.blocks.column.settings.image.label"
           },
           {
+            "type": "checkbox",
+            "id": "enable_image_hover",
+            "default": false,
+            "label": "t:sections.multicolumn.blocks.column.settings.enable_image_hover.label"
+          },
+          {
             "type": "image_picker",
             "id": "image_2",
             "label": "t:sections.multicolumn.blocks.column.settings.image_2.label"
@@ -417,12 +429,16 @@
             "type": "image_picker",
             "id": "image_3",
             "label": "t:sections.multicolumn.blocks.column.settings.image_3.label"
-          },
-          {
+          }, {
             "type": "text",
             "id": "title",
             "default": "Column",
             "label": "t:sections.multicolumn.blocks.column.settings.title.label"
+          }, {
+            "type": "checkbox",
+            "id": "heading_on_hover",
+            "default": false,
+            "label": "t:sections.multicolumn.blocks.column.settings.heading_on_hover.label"
           }, {
             "type": "richtext",
             "id": "text",
