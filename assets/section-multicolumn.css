@@ -40,6 +40,15 @@
   margin: 3rem auto;
 }
 
+.multicolumn-card__image {
+  max-width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
 @media screen and (min-width: 750px) {
   .multicolumn .button {
     margin-top: 4rem;

@@ -3051,3 +3051,29 @@ details-disclosure > details {
     outline: transparent solid 1px;
   }
 }
+
+/* Hover effects */
+
+.media .current-image {
+  display: block;
+  transition: 0.3s ease-in-out;
+  max-width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.media:hover .current-image {
+  display: none !important;
+}
+
+.media #hover-image {
+  display: none;
+  transition: 0.3s ease-in-out;
+}
+
+.media:hover #hover-image {
+  display: block;
+}

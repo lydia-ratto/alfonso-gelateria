@@ -1,0 +1,174 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "b9bf2723-1cd9-4d44-8c14-a1af0826e8d7": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16008258781337__b9bf2723-1cd9-4d44-8c14-a1af0826e8d7-16804464524099b5f3-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Blending tradition and innovation<\/p>",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "template--16008258781337__b9bf2723-1cd9-4d44-8c14-a1af0826e8d7-16804464524099b5f3-0"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "626f7489-f443-4ba3-b99a-03afdb21f8fe": {
+      "type": "image-with-text-background",
+      "blocks": {
+        "template--16008258781337__626f7489-f443-4ba3-b99a-03afdb21f8fe-1680444296c455283b-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Built on heritage",
+            "heading_size": "h1"
+          }
+        },
+        "template--16008258781337__626f7489-f443-4ba3-b99a-03afdb21f8fe-1680444296c455283b-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We celebrate the ingredients and recipes that have long passed through the regions of Italy. <\/p>",
+            "text_style": "subtitle"
+          }
+        },
+        "template--16008258781337__626f7489-f443-4ba3-b99a-03afdb21f8fe-1680444296c455283b-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16008258781337__626f7489-f443-4ba3-b99a-03afdb21f8fe-1680444296c455283b-0",
+        "template--16008258781337__626f7489-f443-4ba3-b99a-03afdb21f8fe-1680444296c455283b-1",
+        "template--16008258781337__626f7489-f443-4ba3-b99a-03afdb21f8fe-1680444296c455283b-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/vespa_man.png",
+        "height": "large",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "accent-2",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "d69c53c7-2bf2-4f5f-ac43-df2e935e79d3": {
+      "type": "image-with-text-background",
+      "blocks": {
+        "dd1b989b-7622-43dc-867b-ba75210f1276": {
+          "type": "heading",
+          "settings": {
+            "heading": "Quality products",
+            "heading_size": "h1"
+          }
+        },
+        "aaec0e02-2663-4360-b4c8-62166eb3f204": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We source natural and single origin ingredients to get the best flavours in our creations. <\/p>",
+            "text_style": "subtitle"
+          }
+        },
+        "04540117-ee30-4d66-a182-6da3dc77ee4c": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "dd1b989b-7622-43dc-867b-ba75210f1276",
+        "aaec0e02-2663-4360-b4c8-62166eb3f204",
+        "04540117-ee30-4d66-a182-6da3dc77ee4c"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/diy-dark-chocolate-chips_1989.webp",
+        "height": "large",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-2",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "4b651f82-ecea-40f7-b63c-362be3a0f958": {
+      "type": "image-with-text-background",
+      "blocks": {
+        "afa5914a-7bfd-40cc-b374-fe1e8bc27a42": {
+          "type": "heading",
+          "settings": {
+            "heading": "Unique flavours",
+            "heading_size": "h1"
+          }
+        },
+        "8074eea1-2962-4bfe-860c-d74e8fd05664": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We have created, experimented and refined our recipes to achieve our ideal balance of texture and flavour.<\/p>",
+            "text_style": "subtitle"
+          }
+        },
+        "20701f59-91a4-4107-ae14-a8b6e4a0f02c": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "afa5914a-7bfd-40cc-b374-fe1e8bc27a42",
+        "8074eea1-2962-4bfe-860c-d74e8fd05664",
+        "20701f59-91a4-4107-ae14-a8b6e4a0f02c"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/vespa_man.png",
+        "height": "large",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "accent-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "b9bf2723-1cd9-4d44-8c14-a1af0826e8d7",
+    "626f7489-f443-4ba3-b99a-03afdb21f8fe",
+    "d69c53c7-2bf2-4f5f-ac43-df2e935e79d3",
+    "4b651f82-ecea-40f7-b63c-362be3a0f958"
+  ]
+}
