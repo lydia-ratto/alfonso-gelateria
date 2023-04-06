@@ -2633,8 +2633,20 @@
             "image": {
               "label": "Image"
             },
+            "enable_image_hover": {
+              "label": "Enable image hover"
+            },
+            "image_2": {
+              "label": "Hover image"
+            },
+            "image_3": {
+              "label": "Background image"
+            },
             "title": {
               "label": "Heading"
+            },
+            "heading_on_hover": {
+              "label": "Show heading on hover"
             },
             "text": {
               "label": "Description"
