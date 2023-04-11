@@ -2900,6 +2900,9 @@
     "rich-text": {
       "name": "Rich text",
       "settings": {
+        "background_image": {
+          "label": "Background image"
+        },
         "desktop_content_position": {
           "options__1": {
             "label": "Left"
