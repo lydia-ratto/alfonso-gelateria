@@ -162,6 +162,164 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "5a302bbb-3838-439e-acbb-1b946538c456": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--16008258781337__5a302bbb-3838-439e-acbb-1b946538c456-1681223517a2ef1ee7-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/gelato_1.png",
+            "enable_image_hover": true,
+            "image_2": "shopify:\/\/shop_images\/yellow-blob.png",
+            "image_3": "shopify:\/\/shop_images\/brown_blobs_2.png",
+            "title": "lemon and hibiscus",
+            "heading_on_hover": true,
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "2519424b-bdd7-41cc-8531-88ffc952925a": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/gelato_1.png",
+            "enable_image_hover": true,
+            "image_2": "shopify:\/\/shop_images\/green-blob_0229eeef-1c90-46e4-a2a4-54ee42a35b00.png",
+            "image_3": "shopify:\/\/shop_images\/pink-blob-background.png",
+            "title": "Pistachio",
+            "heading_on_hover": true,
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "ac5d0a71-f2ee-40a0-b146-378553acd5f5": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/gelato_1.png",
+            "enable_image_hover": true,
+            "image_2": "shopify:\/\/shop_images\/dark-brown-blob.png",
+            "image_3": "shopify:\/\/shop_images\/pink-blob-background-3.png",
+            "title": "dark chocolate & salted almond",
+            "heading_on_hover": true,
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "3929bed5-5b1d-4abf-b11a-f3a868da1627": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/gelato_1.png",
+            "enable_image_hover": true,
+            "image_2": "shopify:\/\/shop_images\/pink-2-blob.png",
+            "image_3": "shopify:\/\/shop_images\/2-blobs-background.png",
+            "title": "mascarpone, caramelised fig & walnut",
+            "heading_on_hover": true,
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "7e541207-be4c-4e7f-a998-a58bc3ecdeea": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/gelato_1.png",
+            "enable_image_hover": true,
+            "image_2": "shopify:\/\/shop_images\/light-beige-blob.png",
+            "image_3": "shopify:\/\/shop_images\/grey-blob-background-2_bf7c1a3a-3878-4450-8e55-74bd70ee15f4.png",
+            "title": "Hazelnut",
+            "heading_on_hover": true,
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "6e67de97-4893-4395-8b9f-9d8f8a5451c5": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/gelato_1.png",
+            "enable_image_hover": true,
+            "image_2": "shopify:\/\/shop_images\/light-peach-blob.png",
+            "image_3": "shopify:\/\/shop_images\/grey-blobs-background.png",
+            "title": "bourbon & biscotti",
+            "heading_on_hover": true,
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "831a8e66-a34d-4d0a-922b-95ac913677eb": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/gelato_1.png",
+            "enable_image_hover": true,
+            "image_2": "shopify:\/\/shop_images\/dark-brown-blob.png",
+            "image_3": "shopify:\/\/shop_images\/grey-blobs-background.png",
+            "title": "Tiramisu",
+            "heading_on_hover": true,
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "f778b27f-41f7-481d-aa12-a314444c0b2a": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/gelato_1.png",
+            "enable_image_hover": true,
+            "image_2": "shopify:\/\/shop_images\/purple-pink-blob.png",
+            "image_3": "shopify:\/\/shop_images\/grey-blobs-background.png",
+            "title": "Forest Fruit Cheescake",
+            "heading_on_hover": true,
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "101475c0-c3a3-4d80-9ad8-d4f088fb5d9b": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/gelato_1.png",
+            "enable_image_hover": true,
+            "image_2": "shopify:\/\/shop_images\/orange-blob.png",
+            "image_3": "shopify:\/\/shop_images\/grey-blobs-background.png",
+            "title": "Passionfruit",
+            "heading_on_hover": true,
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16008258781337__5a302bbb-3838-439e-acbb-1b946538c456-1681223517a2ef1ee7-0",
+        "2519424b-bdd7-41cc-8531-88ffc952925a",
+        "ac5d0a71-f2ee-40a0-b146-378553acd5f5",
+        "3929bed5-5b1d-4abf-b11a-f3a868da1627",
+        "7e541207-be4c-4e7f-a998-a58bc3ecdeea",
+        "6e67de97-4893-4395-8b9f-9d8f8a5451c5",
+        "831a8e66-a34d-4d0a-922b-95ac913677eb",
+        "f778b27f-41f7-481d-aa12-a314444c0b2a",
+        "101475c0-c3a3-4d80-9ad8-d4f088fb5d9b"
+      ],
+      "settings": {
+        "title": "A taste of our flavours...",
+        "heading_size": "h1",
+        "image_width": "half",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -169,6 +327,7 @@
     "b9bf2723-1cd9-4d44-8c14-a1af0826e8d7",
     "626f7489-f443-4ba3-b99a-03afdb21f8fe",
     "d69c53c7-2bf2-4f5f-ac43-df2e935e79d3",
-    "4b651f82-ecea-40f7-b63c-362be3a0f958"
+    "4b651f82-ecea-40f7-b63c-362be3a0f958",
+    "5a302bbb-3838-439e-acbb-1b946538c456"
   ]
 }
