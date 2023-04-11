@@ -3,6 +3,8 @@
 }
 
 .rich-text__wrapper {
+  position: absolute;
+  top: 40%;
   display: flex;
   justify-content: center;
   width: calc(100% - 4rem / var(--font-body-scale));
@@ -83,4 +85,13 @@
 
 .rich-text__blocks.right .rich-text__buttons {
   justify-content: flex-end;
+}
+
+/* Background image */
+
+.rich-text-background {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  opacity: 0.5;
 }

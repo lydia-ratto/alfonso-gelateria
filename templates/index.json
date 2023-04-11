@@ -40,19 +40,13 @@
             "heading": "<p>Authentic Italian Gelato<\/p>",
             "heading_size": "h1"
           }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "<p>We use artisan methods to create quality ice cream that will tranport you to Italy.<\/p>"
-          }
         }
       },
       "block_order": [
-        "heading",
-        "text"
+        "heading"
       ],
       "settings": {
+        "background_image": "shopify:\/\/shop_images\/multi-blobs.png",
         "desktop_content_position": "center",
         "content_alignment": "center",
         "color_scheme": "background-1",
@@ -61,41 +55,46 @@
         "padding_bottom": 80
       }
     },
-    "966e2179-029e-4e63-8a60-6596e3f0d3f4": {
-      "type": "image-banner",
+    "07464338-808c-4843-bff5-8bfa29751b68": {
+      "type": "image-with-text",
       "blocks": {
-        "template--15993791840409__966e2179-029e-4e63-8a60-6596e3f0d3f4-1678635808d234787a-2": {
-          "type": "buttons",
+        "template--15993791840409__07464338-808c-4843-bff5-8bfa29751b68-16812207063ba0a88e-1": {
+          "type": "text",
           "settings": {
-            "button_label_1": "About our Gelato",
-            "button_link_1": "shopify:\/\/pages\/our-gelato",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "text": "<p>While gelato simply means ice cream in Italian, we know it’s so much more than that. We use artisan methods to create quality Ice cream that will transport you to Italy.<\/p><p>Starting in 2018 from an Ape Piaggio truck in Oxford, we’ve since opened shops around Oxfordshire and neighbouring counties. <\/p><p>We hope that our flavours and products can bring comfort, surprise and memorable experiences. <\/p>",
+            "text_style": "body"
+          }
+        },
+        "template--15993791840409__07464338-808c-4843-bff5-8bfa29751b68-16812207063ba0a88e-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "our gelato",
+            "button_link": "shopify:\/\/pages\/our-gelato"
           }
         }
       },
       "block_order": [
-        "template--15993791840409__966e2179-029e-4e63-8a60-6596e3f0d3f4-1678635808d234787a-2"
+        "template--15993791840409__07464338-808c-4843-bff5-8bfa29751b68-16812207063ba0a88e-1",
+        "template--15993791840409__07464338-808c-4843-bff5-8bfa29751b68-16812207063ba0a88e-2"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/gelato-cone.png",
-        "image_overlay_opacity": 0,
-        "image_height": "medium",
-        "desktop_content_position": "middle-center",
-        "show_text_box": true,
-        "desktop_content_alignment": "center",
+        "image": "shopify:\/\/shop_images\/vespa-man.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
         "color_scheme": "background-1",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": true
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     }
   },
   "order": [
     "0068256c-56e9-4627-9c95-5db80cfca60c",
     "rich_text",
-    "966e2179-029e-4e63-8a60-6596e3f0d3f4"
+    "07464338-808c-4843-bff5-8bfa29751b68"
   ]
 }

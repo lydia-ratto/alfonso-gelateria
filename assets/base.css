@@ -421,6 +421,7 @@ body,
 
 .text-body {
   /* font-size: 1.5rem;
+  /* font-size: 1.5rem;
   letter-spacing: 0.06rem;
   line-height: calc(1 + 0.8 / var(--font-body-scale));
   font-family: var(--font-body-family);
@@ -539,6 +540,11 @@ h6,
   color: rgba(var(--color-foreground), 0.75);
   margin-block-start: 1.67em;
   margin-block-end: 1.67em;
+}
+
+p {
+  font-size: 1.7rem;
+  color: #988D7B;
 }
 
 blockquote {
@@ -3050,4 +3056,40 @@ details-disclosure > details {
   .localization-form__select:focus {
     outline: transparent solid 1px;
   }
+}
+
+/* Hover effects */
+
+.media .current-image {
+  display: block;
+  opacity: 1;
+  transition: 0.3s ease-in-out;
+  max-width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.media:hover .current-image {
+  opacity: 0;
+}
+
+.media > .hover {
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+
+.media:hover .hover {
+  opacity: 1;
+}
+
+.text-hover h3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #FBF1E2;
+  text-shadow: 1px 1px 2px rgb(0 0 0 / 25%);
 }
