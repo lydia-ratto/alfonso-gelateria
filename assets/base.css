@@ -421,6 +421,7 @@ body,
 
 .text-body {
   /* font-size: 1.5rem;
+  /* font-size: 1.5rem;
   letter-spacing: 0.06rem;
   line-height: calc(1 + 0.8 / var(--font-body-scale));
   font-family: var(--font-body-family);
@@ -539,6 +540,11 @@ h6,
   color: rgba(var(--color-foreground), 0.75);
   margin-block-start: 1.67em;
   margin-block-end: 1.67em;
+}
+
+p {
+  font-size: 1.7rem;
+  color: #988D7B;
 }
 
 blockquote {
