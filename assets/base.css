@@ -724,16 +724,18 @@ a:not([href]) {
 }
 
 hr {
-  border: none;
-  height: 0.1rem;
-  background-color: rgba(var(--color-foreground), 0.2);
+  height: 0.2rem;
+  width: 60%;
+  background-color: var(--gradient-base-accent-1);
   display: block;
-  margin: 5rem 0;
+  margin: 5rem auto;
+  border: none;
 }
 
 @media screen and (min-width: 750px) {
   hr {
-    margin: 7rem 0;
+    margin: 7rem auto;
+    height: 0.4rem;
   }
 }
 
@@ -744,7 +746,7 @@ hr {
 }
 
 .placeholder {
-  background-color: rgba(var(--color-foreground), 0.04);
+  background-color: var(--gradient-base-accent-1);
   color: rgba(var(--color-foreground), 0.55);
   fill: rgba(var(--color-foreground), 0.55);
 }
