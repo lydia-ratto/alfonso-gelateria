@@ -90,11 +90,54 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "6f049568-1f11-4a29-8bad-03590fe35010": {
+      "type": "email-subscribe",
+      "blocks": {
+        "template--15993791840409__6f049568-1f11-4a29-8bad-03590fe35010-168133264263c8956e-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Get the latest scoop",
+            "heading_size": "h1"
+          }
+        },
+        "template--15993791840409__6f049568-1f11-4a29-8bad-03590fe35010-168133264263c8956e-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Receive the latest news, stories, and offers.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "template--15993791840409__6f049568-1f11-4a29-8bad-03590fe35010-168133264263c8956e-2": {
+          "type": "email_form",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "template--15993791840409__6f049568-1f11-4a29-8bad-03590fe35010-168133264263c8956e-0",
+        "template--15993791840409__6f049568-1f11-4a29-8bad-03590fe35010-168133264263c8956e-1",
+        "template--15993791840409__6f049568-1f11-4a29-8bad-03590fe35010-168133264263c8956e-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Alfonso_Truck.png",
+        "height": "medium",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "0068256c-56e9-4627-9c95-5db80cfca60c",
     "rich_text",
-    "07464338-808c-4843-bff5-8bfa29751b68"
+    "07464338-808c-4843-bff5-8bfa29751b68",
+    "6f049568-1f11-4a29-8bad-03590fe35010"
   ]
 }
