@@ -728,13 +728,11 @@ hr {
   width: 60%;
   background-color: var(--gradient-base-accent-1);
   display: block;
-  margin: 5rem auto;
   border: none;
 }
 
 @media screen and (min-width: 750px) {
   hr {
-    margin: 7rem auto;
     height: 0.4rem;
   }
 }
