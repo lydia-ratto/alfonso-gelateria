@@ -21,19 +21,77 @@ slideshow-component .slideshow.banner {
   padding: 0;
   position: relative;
   display: flex;
-  flex-direction: column;
+}
+
+.slideshow__media {
+  height: 100%;
+  width: 100%;
+}
+
+.slideshow__slide > .image-with-text__media-item {
+  border: 2px solid rgba(var(--color-base-accent-1));
+  padding: 10px;
+  z-index: 2;
+}
+
+.slideshow__text-wrapper {
+  z-index: 0;
 }
 
 @media screen and (max-width: 749px) {
-  .slideshow--placeholder.banner--mobile-bottom.banner--adapt_image .slideshow__media,
+  .slideshow--placeholder.banner--mobile-bottom.banner--adapt_image,
   .slideshow--placeholder.banner--adapt_image:not(.banner--mobile-bottom) {
     height: 28rem;
+  }
+  .slideshow__slide {
+  flex-direction: column;
+  }
+
+  .slideshow__slide > .image-with-text__media-item {
+    width: 20rem;
+    margin: 0 auto;
+  }
+
+  .slideshow__text-wrapper {
+    margin-top: -10rem;
+  }
+
+  .slideshow__text {
+    padding-top: 10rem;
+  }
+
+  .slideshow__text > * {
+    max-width: 100%;
   }
 }
 
 @media screen and (min-width: 750px) {
   .slideshow--placeholder.banner--adapt_image {
     height: 56rem;
+  }
+  .slideshow__slide {
+    flex-direction: row;
+    position: relative;
+
+    }
+  .slideshow__slide > .image-with-text__media-item {
+    top: 15%;
+    width: 30rem;
+    height: 40rem;
+    position: absolute;
+    left: 25%;
+  }
+  .slideshow__text-wrapper {
+    left: 10%;
+    top: 0;
+  }
+
+  .slideshow__text {
+    padding-left: 10rem;
+  }
+
+  .slideshow__text > * {
+  max-width: 70%;
   }
 }
 
@@ -42,11 +100,11 @@ slideshow-component .slideshow.banner {
   flex-direction: column;
   justify-content: center;
   max-width: 54.5rem;
+  border: 0.4rem solid var(--gradient-base-background-1);
+  border-radius: 0.3rem;
+  background-color: #FFF7EA;
 }
 
-.slideshow__text > * {
-  max-width: 100%;
-}
 
 @media screen and (max-width: 749px) {
   slideshow-component.page-width .slideshow__text {
@@ -102,6 +160,9 @@ slideshow-component .slideshow.banner {
   .slideshow__text-wrapper.banner__content {
     height: 100%;
     padding: 5rem;
+  }
+  .slideshow__text {
+    min-height: 45rem;
   }
 }
 
