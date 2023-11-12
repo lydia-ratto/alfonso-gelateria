@@ -32,30 +32,23 @@
   aria-roledescription="{{ 'sections.slideshow.carousel' | t }}"
   aria-label="{{ section.settings.accessibility_info | escape }}">
   {%- if section.settings.auto_rotate and section.blocks.size > 1 -%}
-    <div
-      class="slideshow__controls slideshow__controls--top slider-buttons no-js-hidden{% if section.settings.show_text_below %} slideshow__controls--border-radius-mobile{% endif %}">
+    <div class="slideshow__controls slideshow__controls--top slider-buttons no-js-hidden{% if section.settings.show_text_below %} slideshow__controls--border-radius-mobile{% endif %}">
       <button
         type="button"
         class="slider-button slider-button--prev"
         name="previous"
         aria-label="{{ 'sections.slideshow.previous_slideshow' | t }}"
         aria-controls="Slider-{{ section.id }}">{% render 'icon-caret' %}</button>
-      <div
-        class="slider-counter slider-counter--{{ section.settings.slider_visual }}{% if section.settings.slider_visual == 'counter' or section.settings.slider_visual == 'numbers' %} caption{% endif %}">
+      <div class="slider-counter slider-counter--{{ section.settings.slider_visual }}{% if section.settings.slider_visual == 'counter' or section.settings.slider_visual == 'numbers' %} caption{% endif %}">
         {%- if section.settings.slider_visual == 'counter' -%}
-          <span
-            class="slider-counter--current">1</span>
-          <span
-            aria-hidden="true">
+          <span class="slider-counter--current">1</span>
+          <span aria-hidden="true">
             /
           </span>
-          <span
-            class="visually-hidden">{{ 'general.slider.of' | t }}</span>
-          <span
-            class="slider-counter--total">{{ section.blocks.size }}</span>
+          <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
+          <span class="slider-counter--total">{{ section.blocks.size }}</span>
         {%- else -%}
-          <div
-            class="slideshow__control-wrapper">
+          <div class="slideshow__control-wrapper">
             {%- for block in section.blocks -%}
               <button
                 class="slider-counter__link slider-counter__link--{{ section.settings.slider_visual }} link"
@@ -64,8 +57,7 @@
                 {%- if section.settings.slider_visual == 'numbers' -%}
                   {{ forloop.index }}
                 {% else %}
-                  <span
-                    class="dot"></span>
+                  <span class="dot"></span>
                 {%- endif -%}
               </button>
             {%- endfor -%}
@@ -90,10 +82,8 @@
       {%- endif -%}
     </div>
     <noscript>
-      <div
-        class="slider-buttons">
-        <div
-          class="slider-counter">
+      <div class="slider-buttons">
+        <div class="slider-counter">
           {%- for block in section.blocks -%}
             <a
               href="#Slide-{{ section.id }}-{{ forloop.index }}"
@@ -129,8 +119,7 @@
         aria-roledescription="{{ 'sections.slideshow.slide' | t }}"
         aria-label="{{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
         tabindex="-1">
-        <div
-          class="image-with-text__media-item image-with-text__media-item--{{ block.settings.desktop_image_width }} image-with-text__media-item--{{ block.settings.desktop_content_position }}">
+        <div class="image-with-text__media-item image-with-text__media-item--{{ block.settings.desktop_image_width }} image-with-text__media-item--{{ block.settings.desktop_content_position }}">
           <div
             class="image-with-text__media image-with-text__media--{{ block.settings.height }} gradient color-{{ block.settings.color_scheme }} global-media-settings {% if block.settings.image != blank %}media{% else %}image-with-text__media--placeholder placeholder{% endif %}"
             {% if block.settings.height == 'adapt' and block.settings.image != blank %}
@@ -150,30 +139,20 @@
             {%- endif -%}
           </div>
         </div>
-        <div
-          class="slideshow__text-wrapper banner__content banner__content--{{ block.settings.box_align }} page-width{% if block.settings.show_text_box == false %} banner--desktop-transparent{% endif %}">
-          <div
-            class="color-{{ block.settings.color_scheme }} gradient"
-            style="padding: 1.7rem; border-radius: 0.3rem;">
-            <div
-              class="slideshow__text banner__box content-container content-container--full-width-mobile color-{{ block.settings.color_scheme }} gradient slideshow__text--{{ block.settings.text_alignment }} slideshow__text-mobile--{{ block.settings.text_alignment_mobile }}">
+        <div class="slideshow__text-wrapper banner__content banner__content--{{ block.settings.box_align }} page-width{% if block.settings.show_text_box == false %} banner--desktop-transparent{% endif %}">
+          <div class="color-{{ block.settings.color_scheme }} gradient" style="padding: 1.7rem; border-radius: 0.3rem; background-color: #FFF7EA;">
+            <div class="slideshow__text banner__box content-container content-container--full-width-mobile color-{{ block.settings.color_scheme }} gradient slideshow__text--{{ block.settings.text_alignment }} slideshow__text-mobile--{{ block.settings.text_alignment_mobile }}">
               {%- if block.settings.heading != blank -%}
-                <h2
-                  class="banner__heading {{ block.settings.heading_size }}">{{ block.settings.heading | escape }}</h2>
+                <h2 class="banner__heading {{ block.settings.heading_size }}">{{ block.settings.heading | escape }}</h2>
               {%- endif -%}
               {%- if block.settings.subheading != blank -%}
-                <div
-                  class="banner__text"
-                  {{ block.shopify_attributes }}>
+                <div class="banner__text" {{ block.shopify_attributes }}>
                   <span>{{ block.settings.subheading | escape }}</span>
                 </div>
               {%- endif -%}
               {%- if block.settings.button_label != blank -%}
-                <div
-                  class="banner__buttons">
-                  <a
-                    {% if block.settings.link %}href="{{ block.settings.link }}"{% else %}role="link"aria-disabled="true"{% endif %}
-                    class="button {% if block.settings.button_style_secondary %}button--secondary{% else %}button--primary{% endif %}">{{ block.settings.button_label | escape }}</a>
+                <div class="banner__buttons">
+                  <a {% if block.settings.link %}href="{{ block.settings.link }}"{% else %}role="link"aria-disabled="true"{% endif %} class="button {% if block.settings.button_style_secondary %}button--secondary{% else %}button--primary{% endif %}">{{ block.settings.button_label | escape }}</a>
                 </div>
               {%- endif -%}
             </div>
@@ -184,30 +163,23 @@
   </div>
 
   {%- if section.blocks.size > 1 and section.settings.auto_rotate == false -%}
-    <div
-      class="slideshow__controls slider-buttons no-js-hidden{% if section.settings.show_text_below %} slideshow__controls--border-radius-mobile{% endif %}">
+    <div class="slideshow__controls slider-buttons no-js-hidden{% if section.settings.show_text_below %} slideshow__controls--border-radius-mobile{% endif %}">
       <button
         type="button"
         class="slider-button slider-button--prev"
         name="previous"
         aria-label="{{ 'sections.slideshow.previous_slideshow' | t }}"
         aria-controls="Slider-{{ section.id }}">{% render 'icon-caret' %}</button>
-      <div
-        class="slider-counter slider-counter--{{ section.settings.slider_visual }}{% if section.settings.slider_visual == 'counter' or section.settings.slider_visual == 'numbers' %} caption{% endif %}">
+      <div class="slider-counter slider-counter--{{ section.settings.slider_visual }}{% if section.settings.slider_visual == 'counter' or section.settings.slider_visual == 'numbers' %} caption{% endif %}">
         {%- if section.settings.slider_visual == 'counter' -%}
-          <span
-            class="slider-counter--current">1</span>
-          <span
-            aria-hidden="true">
+          <span class="slider-counter--current">1</span>
+          <span aria-hidden="true">
             /
           </span>
-          <span
-            class="visually-hidden">{{ 'general.slider.of' | t }}</span>
-          <span
-            class="slider-counter--total">{{ section.blocks.size }}</span>
+          <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
+          <span class="slider-counter--total">{{ section.blocks.size }}</span>
         {%- else -%}
-          <div
-            class="slideshow__control-wrapper">
+          <div class="slideshow__control-wrapper">
             {%- for block in section.blocks -%}
               <button
                 class="slider-counter__link slider-counter__link--{{ section.settings.slider_visual }} link"
@@ -216,8 +188,7 @@
                 {%- if section.settings.slider_visual == 'numbers' -%}
                   {{ forloop.index }}
                 {% else %}
-                  <span
-                    class="dot"></span>
+                  <span class="dot"></span>
                 {%- endif -%}
               </button>
             {%- endfor -%}
@@ -242,10 +213,8 @@
       {%- endif -%}
     </div>
     <noscript>
-      <div
-        class="slider-buttons">
-        <div
-          class="slider-counter">
+      <div class="slider-buttons">
+        <div class="slider-counter">
           {%- for block in section.blocks -%}
             <a
               href="#Slide-{{ section.id }}-{{ forloop.index }}"
@@ -261,9 +230,7 @@
 </slideshow-component>
 
 {%- if request.design_mode -%}
-  <script
-    src="{{ 'theme-editor.js' | asset_url }}"
-    defer="defer"></script>
+  <script src="{{ 'theme-editor.js' | asset_url }}" defer="defer"></script>
 {%- endif -%}
 
 {% schema %}
@@ -433,7 +400,7 @@
                 "label": "t:sections.all.heading_size.options__3.label"
               }
             ],
-            "default": "h1",
+            "default": "h2",
             "label": "t:sections.all.heading_size.label"
           }, {
             "type": "text",
