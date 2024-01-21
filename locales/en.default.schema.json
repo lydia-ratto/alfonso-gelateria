@@ -2795,6 +2795,12 @@
             "image": {
               "label": "Image"
             },
+            "add_image_layer": {
+              "label": "Add image layer"
+            },
+            "image_link": {
+              "label": "Image link"
+            },
             "enable_image_hover": {
               "label": "Enable image hover"
             },
@@ -2807,6 +2813,10 @@
             "title": {
               "label": "Heading"
             },
+
+            "heading_on_image": {
+              "label": "Place heading on image"
+            },
             "heading_on_hover": {
               "label": "Show heading on hover"
             },
@@ -2815,6 +2825,20 @@
             },
             "link_label": {
               "label": "Link label"
+            },
+            "link": {
+              "label": "Link"
+            }
+          }
+        },
+        "column-cta-image": {
+          "name": "Column cta",
+          "settings": {
+            "image": {
+              "label": "Background image"
+            },
+            "title": {
+              "label": "Heading"
             },
             "link": {
               "label": "Link"
